@@ -51,7 +51,7 @@ function imprimirResumen() {
     var ventanaImpresion = iframe.contentWindow || iframe.contentDocument;
     ventanaImpresion.document.open();
     ventanaImpresion.document.write('<html><head><title>Resumen de Propina</title><link rel="stylesheet" type="text/css" href="print.css" media="print"></head><body>');
-    ventanaImpresion.document.write('<h1>Resumen de Cuenta</h1>');
+    ventanaImpresion.document.write('<h1 style="color: black;">Resumen de Cuenta</h1>');
     ventanaImpresion.document.write(contenido);
     ventanaImpresion.document.write('</body></html>');
     ventanaImpresion.document.close();
