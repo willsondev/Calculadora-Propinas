@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Mostrar el resumen en el div correspondiente
         totalDiv.innerHTML = 'Monto de la propina: $' + resultado.propina + '<br>' +
                              'Total de la cuenta (incluyendo propina): $' + resultado.totalCuenta;
+
+         totalDiv.classList.add('font-bold','text-2xl', 'text-white', 'text-center')
     });
 });
 

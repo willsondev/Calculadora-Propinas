@@ -10,23 +10,23 @@
 </head>
 <body class="flex items-center justify-center bg-cover bg-center bg-no-repeat bg-fixed bg-opacity-50" style="background-image: url('./assets/images/1.jpg')">
     <div class="max-w-screen-xl mt-20 w-full  bg-opacity-75 backdrop-blur-md backdrop-filter">
-        <h1 class="text-3xl font-bold text-center mb-4 text-white">Calculadora de Propina</h1>
+        <h1 class="text-4xl font-bold text-center mb-4 text-white">Calculadora de Propina</h1>
     
         <div class="container mx-auto flex mt-10 text-white">
             <div class="w-1/2  bg-opacity-75 backdrop-blur-md shadow-lg">
                 <section id="formulario" class="p-4">
                     <div>
-                        <h2 class="text-lg font-semibold mb-2 text-center text-3xl">Calcular</h2>
+                        <h2 class="text-lg font-bold mb-2 text-center text-3xl">Calcular</h2>
                         <form id="formPropina">
                             <div class="mb-4">
                                 <label for="subtotal" class="block font-medium mb-1 text-2xl">Ingrese Subtotal</label>
-                                <input type="number" name="subtotal" id="subtotal" required class="mt-5 w-full py-3 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                                <input type="number" name="subtotal" id="subtotal" required class="text-black mt-5 w-full py-3 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
                             </div>
                             <div class="mb-4">
                                 <label for="propina" class="block font-medium mb-1 text-2xl text-white">Propina (10%)</label>
                                 <input type="number" name="propina" id="propina" value="10" readonly class="text-black py-3 mt-5 w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
                             </div>
-                            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-200 text-2xl mt-5">Calcular</button>
+                            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-2xl px-10 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Calcular</button>
                         </form>
                     </div>
                 </section>
@@ -34,8 +34,8 @@
     
             <div class="w-1/2 flex flex-col justify-center items-center  p-4 shadow-lg bg-opacity-75 backdrop-blur-md text-white">
                 <div id="total" class="mb-4"></div>
-                <button onclick="imprimirResumen()" class="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition duration-200 mb-2 text-2xl">Imprimir Resumen</button>
-                <button onclick="reiniciarCalculo()" class="bg-yellow-500 text-white py-2 px-4 rounded-md hover:bg-yellow-600 transition duration-200 text-2xl">Reiniciar Cálculo</button>
+                <button onclick="imprimirResumen()" class="bg-green-500 text-white py-2 px-10 rounded-full hover:bg-green-600 transition duration-200 mb-2 text-2xl">Imprimir Resumen</button>
+                <button onclick="reiniciarCalculo()" class="bg-yellow-500 text-white py-2 px-10 rounded-full hover:bg-yellow-600 transition duration-200 text-2xl">Reiniciar Cálculo</button>
             </div>
         </div>
     </div>
