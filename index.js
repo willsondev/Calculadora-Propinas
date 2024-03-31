@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var resultado = calcularTotal(subtotal, porcentajePropina);
 
         // Mostrar el resumen en el div correspondiente
-        totalDiv.innerHTML = 'Monto de la propina: $' + resultado.propina + '<br>' +
+        totalDiv.innerHTML ='Monto Subtotal: $' + subtotal + '<br>'  + 'Monto de la propina: $' + resultado.propina + '<br>' +
                              'Total de la cuenta (incluyendo propina): $' + resultado.totalCuenta;
 
          totalDiv.classList.add('font-bold','text-2xl', 'text-black', 'text-center')
