@@ -10,7 +10,16 @@
 </head>
 <body class="flex items-center justify-center bg-cover bg-center bg-no-repeat bg-fixed bg-opacity-50" style="background-image: url('./assets/images/1.jpg')">
     <div class="max-w-screen-xl mt-20 w-full  bg-opacity-75 backdrop-blur-md backdrop-filter">
-        <h1 class="text-4xl font-bold text-center mb-4 text-white">Calculadora de Propina</h1>
+        <nav class="flex justify-between">
+            <ul>
+                <li><a href="./index.html" class="text-3xl font-bold text-white">Calculadora de Propina</a></li>
+            </ul>
+            <ul>
+                <li><a href="./resumen.html" class="flex text-3xl font-bold text-white ">Resumen Diario</a></li>
+            </ul>
+        </nav>
+        
+        
     
         <div class="container mx-auto flex mt-10 text-white">
             <div class="w-1/2  bg-opacity-75 backdrop-blur-md shadow-lg">
@@ -33,9 +42,15 @@
             </div>
     
             <div class="w-1/2 flex flex-col justify-center items-center  p-4 shadow-lg bg-opacity-75 backdrop-blur-md text-white">
-                <div id="total" class="mb-4"></div>
+                <div id="total" class="font-bold text-xl text-black text-center"></div>
+
                 <button onclick="imprimirResumen()" class="bg-green-500 text-white py-2 px-10 rounded-full hover:bg-green-600 transition duration-200 mb-2 text-2xl">Imprimir Resumen</button>
-                <button onclick="reiniciarCalculo()" class="bg-yellow-500 text-white py-2 px-10 rounded-full hover:bg-yellow-600 transition duration-200 text-2xl">Reiniciar Cálculo</button>
+                <button onclick="reiniciarCalculo()" class="mt-5 bg-yellow-500 text-white py-2 px-10 rounded-full hover:bg-yellow-600 transition duration-200 text-2xl">Reiniciar Cálculo</button>
+                <!-- <button onclick="ResumenDiario()" class="mt-5 bg-yellow-500 text-white py-2 px-10 rounded-full hover:bg-yellow-600 transition duration-200 text-2xl">Resumen diario</button>
+                <div id="contenedorResumenes"></div> -->
+                
+
+
             </div>
         </div>
     </div>
@@ -43,5 +58,8 @@
     
 
     <script src="index.js"></script>
-</body>
+    <!-- Agrega esta línea en tu archivo HTML para incluir la biblioteca html2pdf.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+    
 </html>
