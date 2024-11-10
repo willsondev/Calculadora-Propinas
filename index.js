@@ -78,7 +78,7 @@ function imprimirResumen() {
                 <style>
                     /* Estilos personalizados para el contenido del resumen */
                     body {
-                        font-size: 20px; /* Ajusta el tamaño de la letra aquí */
+                        font-size: 15px; /* Ajusta el tamaño de la letra aquí */
                     }
                     h5 {
                         color: black;
