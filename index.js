@@ -34,8 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Total de la cuenta (incluyendo propina): $' + resultado.totalCuenta;
 
             // Mostrar el resumen en el div correspondiente
+          
             totalDiv.innerHTML = resumenTexto;
-            totalDiv.classList.add('font-bold', 'text-xl', 'text-black', 'text-center');
+            totalDiv.classList.add('font-bold', 'bg-white', 'px-10', 'rounded-lg', 'mb-5',  'text-black', 'text-center');
 
             // Guardar el resumen en el localStorage
             guardarResumenDiario(resumenTexto);
@@ -69,10 +70,28 @@ function imprimirResumen() {
     // Escribir el contenido del resumen en el iframe
     var ventanaImpresion = iframe.contentWindow || iframe.contentDocument;
     ventanaImpresion.document.open();
-    ventanaImpresion.document.write('<html><head><title>Resumen de Propina</title><link rel="stylesheet" type="text/css" href="print.css" media="print"></head><body>');
-    ventanaImpresion.document.write('<h1 style="color: black;">Resumen de Cuenta</h1>');
-    ventanaImpresion.document.write(contenido);
-    ventanaImpresion.document.write('</body></html>');
+    ventanaImpresion.document.write(`
+        <html>
+            <head>
+                <title>Resumen de Propina</title>
+                <link rel="stylesheet" type="text/css" href="print.css" media="print">
+                <style>
+                    /* Estilos personalizados para el contenido del resumen */
+                    body {
+                        font-size: 20px; /* Ajusta el tamaño de la letra aquí */
+                    }
+                    h5 {
+                        color: black;
+                        font-size: 14px; /* Ajusta el tamaño de la letra del título */
+                    }
+                </style>
+            </head>
+            <body>
+                <h5>Resumen Cuenta</h5>
+                ${contenido}
+            </body>
+        </html>
+    `);
     ventanaImpresion.document.close();
 
     // Imprimir el contenido del iframe
@@ -83,6 +102,7 @@ function imprimirResumen() {
         document.body.removeChild(iframe);
     }, 1000); // Esperamos 1 segundo antes de eliminar el iframe
 }
+
 
 function reiniciarCalculo() {
     // Restablecer el valor del formulario
