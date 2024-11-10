@@ -29,10 +29,12 @@
                                 <label for="subtotal" class="block font-medium mb-1 text-2xl">Ingrese Subtotal</label>
                                 <input type="number" name="subtotal" id="subtotal" required class="text-black mt-5 w-full py-3 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
                             </div>
-                            <div class="mb-4">
-                                <label for="propina" class="block font-medium mb-1 text-2xl text-white">Propina (10%)</label>
-                                <input type="number" name="propina" id="propina" value="10" readonly class="text-black py-3 mt-5 w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                            </div>
+                           <div class="mb-4">
+    <label for="propina" class="block font-medium mb-1 text-2xl text-white">Propina (%)</label>
+    <input type="number" name="propina" id="propina" min="0" max="100" value="10" 
+           class="text-black py-3 mt-5 w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+</div>
+
                             <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-2xl px-10 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Calcular</button>
                         </form>
                     </div>
